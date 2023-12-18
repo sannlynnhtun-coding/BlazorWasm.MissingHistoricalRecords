@@ -1,0 +1,72 @@
+*:after,
+*:before,
+p a,
+a,
+button.tg-btn,
+.tg-socialicons li a,
+.tg-roundicontext,
+.tg-roundicontext .tg-usericonholder,
+.tg-themedropdownmenu,
+.sub-menu,
+.mega-menu,
+.tg-themetabnav li a,
+.tg-themetabcontent,
+.tg-featureimg,
+.tg-bookimg,
+.tg-backcover,
+.owl-prev,
+.owl-next,
+.tg-postbook,
+.tg-author figure,
+.tg-author figure a,
+.tg-author figure a img,
+.tg-post figure,
+.tg-post figure a,
+.tg-post figure a img,
+textarea,
+.tg-widget ul li figure,
+.tg-widgetinstagram ul li figure,
+.tg-widgetinstagram ul li figure figcaption,
+.tg-quantityholder .minus,
+.tg-quantityholder .plus,
+.tg-alsoavailable figure figcaption ul li span,
+.tg-prevpost figure,
+.tg-nextpost figure,
+.tg-comments li .tg-authorbox,
+.tg-comments li .tg-authorbox .tg-bottomarrow,
+.tg-bookimg,
+.tg-hovercontent .tg-description{
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.tg-bookpage{
+	-webkit-transition: all 400ms ease-in-out;
+	-moz-transition: all 400ms ease-in-out;
+	-ms-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;
+}
+.tg-bookcategory{
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+}
+.tg-bookprice{
+	-webkit-transition: all 600ms ease-in-out;
+	-moz-transition: all 600ms ease-in-out;
+	-ms-transition: all 600ms ease-in-out;
+	-o-transition: all 600ms ease-in-out;
+	transition: all 600ms ease-in-out;
+}
+.tg-ratingbox{
+	-webkit-transition: all 700ms ease-in-out;
+	-moz-transition: all 700ms ease-in-out;
+	-ms-transition: all 700ms ease-in-out;
+	-o-transition: all 700ms ease-in-out;
+	transition: all 700ms ease-in-out;
+}

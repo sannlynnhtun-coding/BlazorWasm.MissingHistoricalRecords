@@ -1,0 +1,114 @@
+/*=============================================
+			Theme Text Color
+=============================================*/
+a,
+p a,
+p a:hover,
+a:hover,
+a:focus,
+a:active,
+.tg-stars span:after,
+.tg-textbox h3 span,
+.tg-bookprice ins,
+.tg-newsletter h4,
+.tg-404errorcontent span,
+.tg-widget ul li:hover a,
+.tg-widget ul li a:hover,
+.tg-widget ul li:hover a span,
+.tg-widget ul li:hover a em,
+.tg-relatedbooks .tg-postbook .tg-bookprice ins{ color: #b22565; }
+/*=============================================
+			Theme Background Color
+=============================================*/
+.tg-btn:hover,
+.tg-btn.tg-active,
+.tg-navigationarea,
+.owl-prev:hover,
+.owl-next:hover,
+.tg-testimonial figure:before,
+.tg-headervtwo .tg-formsearch fieldset button,
+.tg-homeslidervtwo .tg-slidercontent .tg-btns .tg-btn:hover,
+.tg-homeslidervtwo .tg-slidercontent .tg-btns .tg-btn.tg-active,
+.tg-breadcrumb,
+#seconds,
+.tg-quantityholder .minus:hover,
+.tg-quantityholder .plus:hover,
+.tg-themetabs li a:before,
+.tg-tag:hover,
+.tg-btnreply:hover{background:#b22565;}
+/*=============================================
+			Theme Border Color
+=============================================*/
+textarea:focus,
+.tg-btn:hover,
+.tg-btn.tg-active,
+input:focus,
+.select select:focus,
+.form-control:focus,
+.tg-themedropdownmenu,
+.owl-prev:hover,
+.owl-next:hover,
+.tg-pickedbyauthor .tg-postbook:hover,
+.tg-testimonial figure img,
+.tg-footer,
+.tg-quantityholder .minus:hover,
+.tg-quantityholder .plus:hover,
+.tg-tag:hover,
+.tg-comments li .tg-authorbox:hover,
+.tg-comments li .tg-authorbox:hover .tg-bottomarrow,
+.tg-btnreply:hover{ border-color: #b22565;}
+/*=============================================
+			Theme Shadow Color
+=============================================*/
+.tg-btn:hover,
+.tg-btn.tg-active {
+	box-shadow:inset 0 -2px 0 0 #8e1e51;
+	box-shadow:inset 0 -2px 0 0 rgba(0, 0, 0, 0.20);
+}
+/*=============================================
+			Theme Secondary Color
+=============================================*/
+.tg-bookscategories li a:hover,
+.tg-bookwriter:hover a,
+.tg-contactdetail .tg-contactinfo li span em a,
+.tg-newslist .tg-post .tg-postcontent .tg-description p a,
+.tg-addreviews a,
+.tg-productcontent .tg-description p a,
+.tg-alsoavailable figure figcaption ul li:hover span,
+.tg-widget ul li a.tg-btnviewall{ color: #55acee; }
+
+
+
+
+
+/*=============================================
+			Theme Tags Color
+=============================================*/
+.tg-themetag { background: #f16945; }
+
+.tg-themetag:before { border-color: #f16945; }
+
+
+
+
+
+
+
+
+/*=============================================
+			Theme Counter Color
+=============================================*/
+.tg-drama .tg-collectioncountericon{background: #93648d;}
+.tg-drama h2,
+.tg-devlivery .tg-clientserviceicon i{color: #93648d;}
+.tg-horror .tg-collectioncountericon,
+.tg-widget ul li:hover:before{background: #4cc3d9;}
+.tg-horror h2,
+.tg-discount .tg-clientserviceicon i{color: #4cc3d9;}
+.tg-romance .tg-collectioncountericon{background: #7bc8a4;}
+.tg-romance h2,
+.tg-quality .tg-clientserviceicon i{color: #7bc8a4;}
+.tg-fashion .tg-collectioncountericon{background: #f16745;}
+.tg-fashion h2,
+.tg-delevrystock li span em,
+.tg-support .tg-clientserviceicon i{color: #f16745;}
