@@ -9,11 +9,11 @@ public partial class Home
     {
         if (firstRender)
         {
+            _data = await _service.GetBookList();
+            StateHasChanged();
             await Task.Delay(500); 
             await JsRuntime.InvokeVoidAsync("scrollTop");
             await JsRuntime.InvokeVoidAsync("loadJs", "themes/js/main.js");
-            _data = await _service.GetBookList();
-            StateHasChanged();
         }
     }
 }
