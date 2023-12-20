@@ -63,3 +63,7 @@
 code {
     color: #c02d76;
 }
+
+.owl-carousel .owl-item img{
+    height: 220px;
+}

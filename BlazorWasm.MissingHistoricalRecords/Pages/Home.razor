@@ -73,12 +73,13 @@
                         {
                             @foreach (var item in _data.Data)
                             {
+                                var image = item.BookCover;
                                 <div class="item">
                                     <div class="tg-postbook">
                                         <figure class="tg-featureimg">
                                             <div class="tg-bookimg">
-                                                <div class="tg-frontcover"><img src="theme/images/books/img-01.jpg" alt="image description"></div>
-                                                <div class="tg-backcover"><img src="theme/images/books/img-01.jpg" alt="image description"></div>
+                                                <div class="tg-frontcover"><img src="@image" alt="image description"></div>
+                                                <div class="tg-backcover"><img src="@image" alt="image description"></div>
                                             </div>
                                             <a class="tg-btnaddtowishlist" href="javascript:void(0);">
                                                 <i class="icon-heart"></i>
