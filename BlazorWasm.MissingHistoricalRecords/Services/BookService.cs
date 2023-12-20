@@ -28,8 +28,33 @@ public class BookService
         };
         return data;
     }
+
+    public async Task<BookContentResponseModel> BookDetail(BookModel requestModel,int pageNo = 1, int pageSize = 2)
+    {
+        try
+        {
+            var contentList=await GetData<BookContentModel>($"book-json/{requestModel.BookId}.json");
+            var count = contentList?.Count();
+            var totalPageCount = count / pageSize;
+            var result = count % pageSize;
+            if (result > 0)
+                totalPageCount++;
+            var model = new BookContentResponseModel
+            {
+                Data = contentList.Skip((pageNo-1)*pageSize).Take(pageSize).ToList(),
+                TotalPage = totalPageCount
+            };
+            return model;
+        }
+        catch (Exception e)
+        {
+            throw new Exception();
+        }
+    }
+    
     public async Task<List<T>?> GetData<T>(string fileName)
     {
         return await _httpClient.GetFromJsonAsync<List<T>>(fileName);
     }
+    
 }

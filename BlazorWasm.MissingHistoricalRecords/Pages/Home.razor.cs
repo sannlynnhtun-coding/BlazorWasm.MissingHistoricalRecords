@@ -16,4 +16,9 @@ public partial class Home
             await JsRuntime.InvokeVoidAsync("loadJs", "themes/js/main.js");
         }
     }
+
+    private async Task GoToContent(BookModel item)
+    {
+        var resModel=await _service.BookDetail(item);
+    }
 }
