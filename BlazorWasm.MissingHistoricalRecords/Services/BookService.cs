@@ -19,8 +19,8 @@ public class BookService
         var count = bookList?.Count();
         var totalPageCount = count / pageSize;
         var result = count % pageSize;
-        if (result > 0)
-            totalPageCount++;
+        //if (result > 0)
+        //    totalPageCount++;
         var data = new BookResponseModel
         {
             Data = bookList.Skip((pageNo-1)*pageSize).Take(pageSize).ToList(),

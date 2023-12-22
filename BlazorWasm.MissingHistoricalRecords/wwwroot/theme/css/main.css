@@ -313,7 +313,7 @@ address { font-style: italic; }
 	width:100%;
 	float:left;
 }
-.tg-sectionspace {padding: 100px 0;}
+.tg-sectionspace {/*padding: 100px 0;*/}
 .tg-locationmap {
 	width: 100%;
 	float: left;
@@ -678,7 +678,8 @@ li.tg-rss a { background:#ff6600; }
 	color: #fff;
 	padding: 0 10px;
 	text-align: center;
-	background: #f16945;
+	/*background: #f16945;*/
+	background: #6e370f;
 	display: inline-block;
 	vertical-align: middle;
 	text-transform: capitalize;

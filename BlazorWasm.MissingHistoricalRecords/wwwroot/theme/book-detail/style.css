@@ -1,0 +1,91 @@
+/*body {
+  font-size: 18px;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/groovepaper.png");
+  font-family: 'Gelasio', serif;
+}*/
+
+main {
+  color: black;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  margin-left : auto;
+  margin-right: auto;
+}
+
+main div {
+  width: 100%;
+  padding: 6rem 5rem;
+}
+
+/*h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-bottom: 6rem;
+}
+h1 {
+  font-family: 'Ibarra Real Nova', serif;
+  text-align: center;
+  font-weight: 400;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  letter-spacing: .1rem;
+}*/
+
+.right-page {
+  margin-top: 0;
+  padding-top: 0;
+}
+.right-page p {
+  line-height: 1.4;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.right-page p:first-letter {
+    font-family: 'Ibarra Real Nova', serif;
+    font-size: 4.5rem;
+    float: left;
+    margin-top: .5rem;
+    margin-right: 1rem;
+    line-height: .7;
+}
+
+.left-page {
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.left-page small {
+  font-style: italic;
+}
+
+.left-page img {
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media screen and (min-width: 900px) {
+  main {
+    flex-direction: row;
+    with: 100%;
+    max-width: 1800px;
+  }
+  main div {
+    width: 50%;
+  }
+  .left-page {
+    padding-top: 14rem;
+  }
+  .right-page {
+    padding-top: 6rem;
+    max-height: 100vh;
+    height: 100vh;
+  }
+}
