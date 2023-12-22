@@ -62,22 +62,49 @@ else
 {
     if (_bookDetail is not null)
     {
-        <div class="text-center">
+        <MudGrid Style="padding-left: 8%;">
+            <MudSpacer />
+            <MudItem xs="3">
+                <MudTooltip Text="Previous Page" Color="Color.Primary" Placement="Placement.Bottom" Arrow="true">
+                    <MudIconButton Icon="@Icons.Material.Filled.KeyboardArrowLeft"
+                                   Disabled="(_pageNo - 1 == 0)"
+                                   OnClick="() => PageChanged(_pageNo - 1)"
+                                   Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Large"
+                                   Class="me-2" />
+                </MudTooltip>
+            </MudItem>
+            <MudSpacer />
+            <MudItem xs="3">
+                <MudButton Variant="Variant.Filled" Color="Color.Dark" @onclick="Back">Back</MudButton>
+            </MudItem>
+            <MudSpacer />
+            <MudItem xs="3" Style="padding-left: 4%;">
+                <MudTooltip Text="Next Page" Color="Color.Primary" Placement="Placement.Bottom" Arrow="true">
+                    <MudIconButton Icon="@Icons.Material.Filled.KeyboardArrowRight"
+                                   Disabled="(_pageNo == _totalPage)"
+                                   OnClick="() => PageChanged(_pageNo + 1)"
+                                   Variant="Variant.Outlined" Color="Color.Primary" Size="Size.Large"
+                                   Class="me-2" />
+                </MudTooltip>
+            </MudItem>
+        </MudGrid>
+
+        @*  <div class="text-center">
             <MudButton Variant="Variant.Filled" Color="Color.Dark" @onclick="Back">Back</MudButton>
-        </div>
+        </div> *@
         <div id="wrapper">
             <div id="container">
                 <section class="open-book">
                     <header>
-                        <h1>Book Layout</h1>
-                        <h6>Erin E. Sullivan</h6>
+                        <h1></h1>
+                        <h6></h6>
                     </header>
                     <article>
                         @if (_pageNo - 1 == 0)
                         {
                             <h2 class="chapter-title">@Book.BookTitle</h2>
                         }
-                        @foreach (var item in _bookDetail.Data)
+                        @foreach (var item in _bookDetail.BookContent)
                         {
                             <p>
                                 @((MarkupString)item.Content)
