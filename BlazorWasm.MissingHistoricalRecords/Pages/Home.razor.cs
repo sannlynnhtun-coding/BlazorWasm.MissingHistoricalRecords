@@ -4,14 +4,14 @@ namespace BlazorWasm.MissingHistoricalRecords.Pages;
 
 public partial class Home
 {
-    private BookResponseModel? _data { get;set; }
+    private BookResponseModel? _data { get; set; }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             _data = await _service.GetBookList();
             StateHasChanged();
-            await Task.Delay(500); 
+            await Task.Delay(500);
             await JsRuntime.InvokeVoidAsync("scrollTop");
             await JsRuntime.InvokeVoidAsync("loadJs", "themes/js/main.js");
         }
@@ -19,6 +19,8 @@ public partial class Home
 
     private async Task GoToContent(BookModel item)
     {
-        var resModel=await _service.BookDetail(item);
+        var resModel = await _service.BookDetail(item);
+        if (resModel is not null)
+            Nav.NavigateTo($"/book/{resModel!.Book.BookId}");
     }
 }

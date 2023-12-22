@@ -9,9 +9,3 @@ public class BookModel
     public string BookCategory { get; set; }
     public string BookDescription { get; set; }
 }
-
-public class BookResponseModel
-{
-    public List<BookModel> Data { get; set; }
-    public int? TotalPage { get; set; }
-}
