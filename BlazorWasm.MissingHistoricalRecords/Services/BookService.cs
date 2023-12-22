@@ -23,17 +23,18 @@ public class BookService
         //    totalPageCount++;
         var data = new BookResponseModel
         {
-            Data = bookList.Skip((pageNo-1)*pageSize).Take(pageSize).ToList(),
+            Data = bookList.Skip((pageNo - 1) * pageSize).Take(pageSize).ToList(),
             TotalPage = totalPageCount
         };
         return data;
     }
 
-    public async Task<BookContentResponseModel> BookDetail(BookModel requestModel,int pageNo = 1, int pageSize = 2)
+    public async Task<BookContentResponseModel?> BookDetail(BookModel requestModel, int pageNo = 1, int pageSize = 2)
     {
         try
         {
-            var contentList=await GetData<BookContentModel>($"book-json/{requestModel.BookId}.json");
+            var book = await GetData<BookModel>($"book-json/books.json");
+            var contentList = await GetData<BookContentModel>($"book-json/{requestModel.BookId}.json");
             var count = contentList?.Count();
             var totalPageCount = count / pageSize;
             var result = count % pageSize;
@@ -41,20 +42,24 @@ public class BookService
                 totalPageCount++;
             var model = new BookContentResponseModel
             {
-                Data = contentList.Skip((pageNo-1)*pageSize).Take(pageSize).ToList(),
-                TotalPage = totalPageCount
+                Book = book!.FirstOrDefault(x => x.BookId == requestModel.BookId)!,
+                BookContent = contentList!
+                    .Skip((pageNo - 1) * pageSize)
+                    .Take(pageSize)
+                    .ToList(),
+                TotalPage = Convert.ToInt32(totalPageCount)
             };
             return model;
         }
         catch (Exception e)
         {
-            throw new Exception();
+            Console.WriteLine(e.ToString());
+            return null;
         }
     }
-    
+
     public async Task<List<T>?> GetData<T>(string fileName)
     {
         return await _httpClient.GetFromJsonAsync<List<T>>(fileName);
     }
-    
 }
