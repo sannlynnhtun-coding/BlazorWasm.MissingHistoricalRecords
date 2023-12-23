@@ -1,14 +1,10 @@
-﻿ @page "/"
+﻿@page "/"
 @using MudBlazor
- @inject IJSRuntime JsRuntime
+@inject IJSRuntime JsRuntime
 
-
-<PageTitle>Home</PageTitle>
 @if (_formType == EnumFormType.List)
 {
-
     <main id="tg-main" class="tg-main tg-haslayout">
-
         <section class="tg-sectionspace tg-haslayout">
             <div class="container">
                 <div class="row">
@@ -19,7 +15,7 @@
                                 @foreach (var item in _data.Data)
                                 {
                                     var image = item.BookCover;
-                                    <div class="item" @onclick="()=>GoToContent(item)">
+                                    <div class="item" @onclick="()=> GoToContent(item)">
                                         <div class="tg-postbook">
                                             <figure class="tg-featureimg">
                                                 <div class="tg-bookimg">
@@ -46,9 +42,7 @@
                 </div>
             </div>
         </section>
-
     </main>
-
     @if (_data is not null)
     {
         <div class="text-center" style="margin-top: -40px; padding-bottom: 40px;">
@@ -88,7 +82,6 @@ else
                 </MudTooltip>
             </MudItem>
         </MudGrid>
-
         @*  <div class="text-center">
             <MudButton Variant="Variant.Filled" Color="Color.Dark" @onclick="Back">Back</MudButton>
         </div> *@
@@ -134,7 +127,6 @@ else
                         </ol>
                     </footer>
                 </section>
-
             </div>
         </div>
     }

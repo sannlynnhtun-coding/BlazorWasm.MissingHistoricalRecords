@@ -1,8 +1,7 @@
-﻿@inherits LayoutComponentBase
+﻿@using MudBlazor
+@inherits LayoutComponentBase
 @inject NavigationManager _nav
-<!--************************************
-                Header Start
-        *************************************-->
+
 <header id="tg-header" class="tg-header tg-haslayout">
     <div class="tg-middlecontainer">
         <div class="container">
@@ -21,42 +20,12 @@
         </div>
     </div>
 </header>
-<!--************************************
-        Header End
-*************************************-->
 @Body
-
-<!--************************************
-        Footer Start
-*************************************-->
-<footer id="tg-footer" class="tg-footer tg-haslayout">
-    <div class="tg-footerbar">
-        <a id="tg-btnbacktotop" class="tg-btnbacktotop" href="javascript:void(0);"><i class="icon-chevron-up"></i></a>
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    @if (DateTime.Now.Year == 2023)
-                    {
-                        _year = DateTime.Now.Year.ToString();
-                    }
-                    else
-                    {
-                        _year = $"{DateTime.Now.Year - 2023} - {DateTime.Now.Year}";
-                    }
-                    <span class="tg-copyright">@_year All Rights Reserved.</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!--************************************
-        Footer End
-*************************************-->
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 @code {
-    private string _year { get; set; }
+    private string? _year { get; set; }
 
     private void GoToMainPage()
     {

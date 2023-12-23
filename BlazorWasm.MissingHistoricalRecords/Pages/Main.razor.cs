@@ -11,7 +11,7 @@ public partial class Main
     private EnumFormType _formType = EnumFormType.List;
     public int spacing { get; set; } = 2;
     private int _pageNo { get; set; } = 1;
-    private int? _totalPage { get; set; } 
+    private int? _totalPage { get; set; }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -36,9 +36,10 @@ public partial class Main
     {
         if (Book is null) return;
         _pageNo = pageNo;
-        _bookDetail = await _service.BookDetail(Book,pageNo);
+        _bookDetail = await _service.BookDetail(Book, pageNo);
         StateHasChanged();
     }
+
     private int? CalculatePageNo(int? contentCount)
     {
         int? result = contentCount / 2;
@@ -46,6 +47,7 @@ public partial class Main
             result++;
         return result;
     }
+
     private async Task Back()
     {
         _data = await _service.GetBookList();
@@ -59,7 +61,7 @@ public partial class Main
 
     private async Task LoadJavaScript()
     {
-        await Task.Delay(1000);
+        await Task.Delay(500);
         await JsRuntime.InvokeVoidAsync("scrollTop");
         await JsRuntime.InvokeVoidAsync("loadJs", "theme/js/main.js");
     }
